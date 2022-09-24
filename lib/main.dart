@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,29 +30,34 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final flutterWebViewPlugin = FlutterWebviewPlugin();
+  // final flutterWebViewPlugin = FlutterWebviewPlugin();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    flutterWebViewPlugin.onStateChanged.listen((WebViewStateChanged event) {
-      debugPrint("stateEvent: ${event.type}");
-    });
+    // flutterWebViewPlugin.onStateChanged.listen((WebViewStateChanged event) {
+    //   debugPrint("stateEvent: ${event.type}");
+    // });
   }
 
   @override
   Widget build(BuildContext context) {
-    return WebviewScaffold(
-      url: "https://www.legofie.com/",
-      withLocalStorage: true,
-      initialChild: Container(
-        color: Colors.redAccent,
-        child: const Center(
-          child: Text('Waiting...'),
-        ),
+    return Scaffold(
+      body: Container(
+        color: Colors.red,
       ),
     );
+    //   // WebviewScaffold(
+    //   // url: "https://www.legofie.com/",
+    //   // withLocalStorage: true,
+    //   // initialChild: Container(
+    //   //   color: Colors.redAccent,
+    //   //   child: const Center(
+    //   //     child: Text('Waiting...'),
+    //   //   ),
+    //   // ),
+    // );
   }
 }
