@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
       initialChild: Container(
         color: Colors.redAccent,
         child: const Center(
-          child: Text('Waiting.....'),
+          child: Text('Waiting...'),
         ),
       ),
     );
