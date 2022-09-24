@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,17 +23,17 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter app'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Hello world!'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('Zapp!');
           Future<void>.value()
-              .then((val) => throw new Exception('You got Zapped!'));
+              .then((val) => throw Exception('You got Zapped!'));
         },
         backgroundColor: Colors.yellow[700],
-        child: Icon(
+        child: const Icon(
           Icons.bolt,
           color: Colors.black,
         ),
